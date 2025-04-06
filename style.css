@@ -1,3 +1,9 @@
+
+:root{
+    font-family: "Nunito Sans", sans-serif;
+    --white: #FFFFFF
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +11,9 @@
 }
 
 html,body{
-    margin: 0 auto;
     width: 100%;
     height: 100%;
-    background-color: #FFFFFF;
+    background-color: var(--white);
 }
 
 .header{
@@ -16,11 +21,41 @@ html,body{
     height: 231px;
     display: flex;
     flex-wrap: wrap;
+    position: fixed;
 }
 
 .headerMessage{
+    min-width: 390px;
     width: 100%;
     height: 52px;
     background-color: #005CFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.headerMessage p{
+    color: var(--white);
+    height: 44px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.headerMessage #headerMessagePrice{
+    background-color: #6220C1;
+    color: var(--white);
+    padding: 0 5px;
+}
+
+.headerMessage #headerMessageCoupon{
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+
+
+
 
