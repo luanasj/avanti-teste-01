@@ -1,6 +1,9 @@
 :root{
     font-family: "Nunito Sans", sans-serif;
-    --white: #FFFFFF
+    --white: #FFFFFF;
+    --blue: #005CFF;
+    --purple: #6220C1;
+    --black: #000000;
 }
 
 * {
@@ -22,7 +25,7 @@ html,body{
     width: 100%;
     height: 231px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     position: fixed;
     box-shadow: 0 3px 3px 0 #0000000D;
 }
@@ -30,7 +33,7 @@ html,body{
 .headerMessage{
     width: 100%;
     height: 52px;
-    background-color: #005CFF;
+    background-color: var(--blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +49,7 @@ html,body{
 }
 
 .headerMessage #headerMessagePrice{
-    background-color: #6220C1;
+    background-color: var(--purple);
     color: var(--white);
     padding: 0 5px;
 }
@@ -59,13 +62,20 @@ html,body{
 .headerContent{
     width:100%;
     height: 132px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 3.7%;
+    border: 1px solid black;
 }
 
 .headerContent #showNavbarBtn{
     display: flex;
     height: 21.38px;
-    width: 100%;
+    /* width: 100%; */
     cursor: pointer;
+    /* background-color: #6220C1; */
 }
 
 #showNavbarBtn #navbarIcon{
@@ -87,8 +97,6 @@ html,body{
 #showNavbarBtn #navbarTitle{
     width: 130px;
     display: none;
-    
-
 }
 
 .navbar {
@@ -101,8 +109,40 @@ html,body{
     justify-content: space-around;
     width: 148.07px;
     height: 26.28px;
+    /* background-color: #005CFF; */
+}
+
+.shoppingCart{
+    position: relative;
+    /* border: 1px solid black; */
+    display: flex;
+    /* height: calc(24.16px + 21px*0.4); */
+    width: calc(25.04px + 21px*0.5);
+}
+
+.shoppingCart #shoppingCartQtt{
+    position:absolute;
+    background-color: var(--blue);
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    line-height: 21px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    right: 0;
+    top:-40%;
+}
+
+#headerSearchBar{
+    width: 100%;
+    /* max-width: ; */
     background-color: #005CFF;
 }
+
+
 
 
 
