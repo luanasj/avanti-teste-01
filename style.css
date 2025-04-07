@@ -1,4 +1,3 @@
-
 :root{
     font-family: "Nunito Sans", sans-serif;
     --white: #FFFFFF
@@ -11,10 +10,13 @@
 }
 
 html,body{
+    min-width: 390px;
     width: 100%;
     height: 100%;
     background-color: var(--white);
 }
+
+/* Mobile First */
 
 .header{
     width: 100%;
@@ -25,7 +27,6 @@ html,body{
 }
 
 .headerMessage{
-    min-width: 390px;
     width: 100%;
     height: 52px;
     background-color: #005CFF;
@@ -53,6 +54,46 @@ html,body{
     font-weight: 400;
     text-transform: uppercase;
 }
+
+.headerContent{
+    width:100%;
+    height: 132px;
+}
+
+.headerContent #showNavbarBtn{
+    display: flex;
+    height: 21.38px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#showNavbarBtn #navbarIcon{
+    height: 100%;
+    width: 23.72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbarIcon div{
+    width: 100%;
+    height: 0;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#showNavbarBtn #navbarTitle{
+    width: 130px;
+    display: none;
+    
+
+}
+
+.navbar {
+    display: none;
+}
+
 
 
 
