@@ -4,6 +4,7 @@
     --blue: #005CFF;
     --purple: #6220C1;
     --black: #000000;
+    --medium-gray: #DDDDDD;
 }
 
 * {
@@ -19,15 +20,25 @@ html,body{
     background-color: var(--white);
 }
 
+input{
+    border: none;
+    background:none;
+}
+
+input:focus{
+    outline: none;
+}
+
 /* Mobile First */
 
 .header{
     width: 100%;
-    height: 231px;
+    height: 184px;
     display: flex;
     flex-direction: column;
     position: fixed;
     box-shadow: 0 3px 3px 0 #0000000D;
+    /* border: 1px solid black; */
 }
 
 .headerMessage{
@@ -67,7 +78,7 @@ html,body{
     justify-content: space-between;
     align-items:center;
     padding: 0 3.7%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .headerContent #showNavbarBtn{
@@ -138,9 +149,43 @@ html,body{
 
 #headerSearchBar{
     width: 100%;
+    height: 40px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 10px;
+    padding: 0 19px;
+    display: flex;
+    align-items: center;
     /* max-width: ; */
-    background-color: #005CFF;
+    /* background-color: #005CFF; */
 }
+
+#headerSearchBar #headerSearchInput{
+    height: 19px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: black;
+    width: 100%;
+}
+
+#headerSearchBar button{
+    background: none;
+    border: none;
+    display: flex;
+    
+}
+
+#headerSearchBar input::placeholder {
+    font-family: "Nunito Sans", sans-serif;
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+
+
 
 
 
