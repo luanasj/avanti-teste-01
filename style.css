@@ -32,7 +32,7 @@ a {
 
 li{
     list-style: none;
-    
+
 }
 
 input:focus{
@@ -80,7 +80,6 @@ input:focus{
 .headerMessage #headerMessageCoupon{
     font-weight: 400;
     text-transform: uppercase;
-    font-style: italic;
 }
 
 .headerContent{
@@ -142,13 +141,41 @@ input:focus{
 
 .siteTitle{
     /* optimize later */
+    position: relative;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     width: 148.07px;
     height: 26.28px;
     order: 1;
+    /* border: 1px solid black; */
     /* background-color: #005CFF; */
 }
+
+.siteTitle *{
+    position: absolute;
+}
+
+.siteTitle img:nth-child(1){
+    left: 0px;
+    /* border: #6220C1; */
+}
+.siteTitle img:nth-child(2){
+    left: 24.07px;
+}
+.siteTitle img:nth-child(3){
+    left: 47.98px;
+}
+.siteTitle img:nth-child(4){
+    left: 87.84px;
+}
+.siteTitle img:nth-child(5){
+    left: 114.29px;
+}
+.siteTitle img:nth-child(6){
+    left: 144.54px;
+}
+
+
 
 .shoppingCartProfileContainer{
     display: contents;
@@ -213,7 +240,6 @@ input:focus{
     color: black;
     font-weight: 600;
     font-size: 14px;
-
 }
 
 @media (min-width: 768px){
@@ -226,6 +252,13 @@ input:focus{
     .headerMessage p{
         max-width: 760px;
         height: 22px;
+    }
+    .headerMessage #headerMessagePrice{
+        border-radius: 4px;
+    }
+    
+    .headerMessage #headerMessageCoupon{
+        font-style: italic;
     }
 }
 
