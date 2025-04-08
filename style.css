@@ -55,8 +55,10 @@ input:focus{
     height: 44px;
     text-align: center;
     line-height: 22px;
+    /* vertical-align: middle; */
     font-size: 14px;
     font-weight: 700;
+    max-width: 360px;
 }
 
 .headerMessage #headerMessagePrice{
@@ -68,6 +70,7 @@ input:focus{
 .headerMessage #headerMessageCoupon{
     font-weight: 400;
     text-transform: uppercase;
+    font-style: italic;
 }
 
 .headerContent{
@@ -182,6 +185,19 @@ input:focus{
     font-weight: 600;
     font-size: 14px;
 
+}
+
+@media (min-width: 768px){
+    .header{
+        height: 162px;
+    }
+    .headerMessage{
+        height: 30px;
+    }
+    .headerMessage p{
+        max-width: 760px;
+        height: 22px;
+    }
 }
 
 
