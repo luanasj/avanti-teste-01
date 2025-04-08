@@ -242,6 +242,11 @@ input:focus{
     font-size: 14px;
 }
 
+.main {
+    /* position: relative; */
+    padding-top: 184px;
+}
+
 @media (min-width: 768px){
     .header{
         height: 162px;
