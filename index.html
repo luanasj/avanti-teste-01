@@ -19,39 +19,56 @@
             </p>            
         </div>
         <div class="headerContent" id="headerContent">
-            <div id="showNavbarBtn">
-                <div id="navbarIcon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+            <div id="navbarContainer" class="navbarContainer">
+                <div id="showNavbarBtn">
+                    <div id="navbarIcon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <h6 id="navbarTitle">Todas as Categorias</h6>
                 </div>
-                <h6 id="navbarTitle">Todas as Categorias</h6>
+                <nav id="navbar" class="navbar">
+                    <!-- preencher com js -->
+                    <ul>
+                        <li class="department" id="department0"><a href=""></a></li>
+                        <li class="department" id="department1"><a href=""></a></li>
+                        <li class="department" id="department2"><a href=""></a></li>
+                        <li class="department" id="department3"><a href=""></a></li>
+                        <li class="department" id="department4"><a href=""></a></li>
+                        <li class="department" id="department5"><a href=""></a></li>
+                        <li class="department" id="department6"><a href=""></a></li>
+                        <li class="department" id="department7"><a href=""></a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav id="navbar" class="navbar">
-                <!-- preencher com js -->
-                <!-- <ul></ul> -->
-            </nav>
-            <h1 id="siteTitle" class="siteTitle">
-                <!-- preencher com js -->
-                 <img src="./assets/icons/A.svg" alt="A">
-                 <img src="./assets/icons/V.svg" alt="v">
-                 <img src="./assets/icons/AA.svg" alt="A">
-                 <img src="./assets/icons/N.svg" alt="N">
-                 <img src="./assets/icons/T.svg" alt="T">
-                 <img src="./assets/icons/I.svg" alt="I" >
-            </h1>
-            <div id="shoppingCart" class="shoppingCart">
+
+            <div id="titleSearchContainer" class="titleSearchContainer">
+                <h1 id="siteTitle" class="siteTitle">
+                    <!-- preencher com js -->
+                        <img src="./assets/icons/A.svg" alt="A">
+                        <img src="./assets/icons/V.svg" alt="v">
+                        <img src="./assets/icons/AA.svg" alt="A">
+                        <img src="./assets/icons/N.svg" alt="N">
+                        <img src="./assets/icons/T.svg" alt="T">
+                        <img src="./assets/icons/I.svg" alt="I" >
+                </h1>
+    
+                <div id="headerSearchBar" class="searchBar">
+                <input type="search" name="searchInput" id="headerSearchInput" class="searchInput" placeholder="Digite aqui o que você procura">
+                <button id="headerSearchButton" class="searchButton"><img src="./assets/icons/magnifying-glass.svg" alt="magnifying-glass"></button>
+                </div>
+            </div>
+
+            <div id="shoppingCartProfileContainer" class="shoppingCartProfileContainer">
+                <div id="shoppingCart" class="shoppingCart">
                 <img src="./assets/icons/shopping-cart.svg" alt="shoppingCart">
                 <span id="shoppingCartQtt">2</span>
-    
+                </div>
             </div>
 
             
 
-            <div id="headerSearchBar" class="searchBar">
-            <input type="search" name="searchInput" id="headerSearchInput" class="searchInput" placeholder="Digite aqui o que você procura">
-            <button id="headerSearchButton" class="searchButton"><img src="./assets/icons/magnifying-glass.svg" alt="magnifying-glass"></button>
-            </div>
             <!-- usar css para mudar a ordem dos elementos no desktop -->
         </div>
     </header>
