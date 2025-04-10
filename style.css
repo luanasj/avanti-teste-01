@@ -418,6 +418,7 @@ input:focus{
     text-decoration: underline;
 }
 
+
 .cardList{
     display: flex;
     align-items: center;
@@ -591,6 +592,48 @@ input:focus{
     display: flex;
     background-color: var(--purple);
 }
+
+.productPost{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 38px;
+    margin-bottom: 56px;
+}
+
+.postBanner{
+    width:100%;
+    height: 390px;
+}
+
+.postTextContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    width: 343px;
+    font-family: "Nunito",sans-serif;
+}
+
+.postTextContainer .postTitle{
+    height:34px;
+    line-height: 140%;
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+}
+
+.postTextContainer .postText{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+}
+
+
 
 
 
