@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 :root{
     font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+    font-style: normal;
     --white: #FFFFFF;
     --blue: #005CFF;
     --purple: #6220C1;
@@ -18,6 +25,8 @@ html,body{
     width: 100%;
     height: 100%;
     background-color: var(--white);
+    /* display: flex; */
+    /* justify-content: center; */
 }
 
 input{
@@ -35,6 +44,16 @@ li{
 
 }
 
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+
 input:focus{
     outline: none;
 }
@@ -49,6 +68,9 @@ input:focus{
     position: fixed;
     box-shadow: 0 3px 3px 0 #0000000D;
     /* border: 1px solid black; */
+    z-index: 1000;
+    background-color: var(--white);
+
 }
 
 .headerMessage{
@@ -241,6 +263,590 @@ input:focus{
     font-weight: 600;
     font-size: 14px;
 }
+
+.main {
+    /* position: relative; */
+    /* width: 100%; */
+    padding-top: 184px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+
+    
+}
+
+.headBanner{
+    font-family: "Nunito","Nunito Sans",sans-serif;
+    width:100%;
+    height: 306px;
+    background-color: #E7E7EA;
+    display: flex;
+    /* position: relative; */
+    align-items: center;
+    /* justify-content: center; */
+    
+    /* z-index: 1; */
+}
+
+.bannerImg{
+    mix-blend-mode: darken;
+    position: absolute;
+    /* border: 1px solid black; */
+}
+
+.bannerText{
+    font-family: "Nunito",sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 37%;
+    /* width:164px; */
+    height: 53.6%;
+    text-transform: uppercase;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-left: 54.6%;
+}
+
+.bannerText .upperBannerText{
+    /* font-family: "Nunito Sans",sans-serif; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80px;
+    padding: 0px 3px;
+    line-height: 40px;
+    font-size: 40px;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+.upperBannerText span:nth-child(1){
+    /* display: flex; */
+    /* font-family: "Nunito Sans",sans-serif; */
+    /* border: 1px solid rgb(221, 43, 43); */
+    font-weight: 700;
+    width: 100%;
+
+    /* line-height: 40px;
+    font-size: 40px;
+    text-align: center; */
+
+}
+
+.upperBannerText span:nth-child(2){
+    /* font-family: "Nunito Sans",sans-serif; */
+    /* border: 1px solid rgb(221, 43, 43); */
+    font-weight: 300;
+    width: 100%;
+}
+
+.bannerText .lowerBannerText{
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    /* align-items: center; */
+    text-align: center;
+    color: var(--blue);
+}
+
+.lowerBannerText span:nth-child(1){
+    /* display: flex; */
+    /* font-family: "Nunito Sans",sans-serif; */
+    /* border: 1px solid rgb(221, 43, 43); */
+    font-weight: 700;
+    width: 100%;
+    font-size: 12px;
+
+    /* line-height: 40px;
+    font-size: 40px;
+    text-align: center; */
+
+}
+
+.lowerBannerText span:nth-child(2){
+    /* font-family: "Nunito Sans",sans-serif; */
+    /* border: 1px solid rgb(221, 43, 43); */
+    font-weight: 700;
+    width: 100%;
+    font-size: 32px;
+    height: 44px;
+    line-height: 100%;
+    padding: 4px;
+
+}
+
+
+.cardWrapper{
+    width: 91.8%;
+    height: 426px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin: 56px 0px;
+
+}
+
+.cardWrapperHeader{
+    width: 100%;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+
+.cardWrapperTitle{
+    font-weight: 700;
+    font-size: 16px;
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;   
+}
+
+.seeMoreLink{
+    width: 67px;
+    height: 20px;
+    line-height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 700;
+    color: #303030;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+
+.cardList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.cardItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 365px;
+    width: 174px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 10px;    
+    /* padding: 12px 0px; */
+}
+
+.cardLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 158px;
+    /* height: 341px; */
+    /* border: 1px solid var(--medium-gray);
+    border-radius: 10px; */
+    position: relative;
+    /* border: 1px solid black */
+}
+
+.cardItemStatus{
+    position: absolute;
+    /* top: 0px;  */
+    left: 0px; 
+    width: 41px;
+    height: 22px;
+    border-radius: 4px;
+    background-color: #00264E;
+    color: var(--white);
+    line-height: 22px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.cardImg{
+    width: 158px;
+    height: 158px;
+    /* border:1px solid #000000; */
+}
+
+.cardInfo{
+    width: 100%;
+    /* height: 127px; */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+
+
+.cardTitle{
+    /* border: 1px solid black; */
+    font-weight: 400;
+    color: #303030;
+    font-size: 14px;
+    width: 100%;
+    text-transform: capitalize;
+    margin: 8px 0px;
+}
+
+.priceContainer{
+    width: 145px;
+    height: 58px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0;
+    justify-content: space-between;
+}
+
+.cardPriceContainer{
+    /* border: 1px solid black;  */
+
+    width:64px;
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardPriceContainer .previousPrice{
+    font-weight: 400;
+    color: #303030;
+    font-size: 12px;
+    height: 16px;
+    line-height: 100%;
+    vertical-align: middle;
+    /* border: 1px solid black;  */
+    text-transform: capitalize;
+    text-decoration: line-through;
+
+}
+
+.cardPriceContainer .currentPrice{
+    height: 22px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    /* text-align: center; */
+    vertical-align: middle;
+    text-transform: capitalize;
+    /* border:1px solid black; */
+}
+
+.itemDiscount{
+    background-color: #5EC0BE;
+    color: var(--white);
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    width: 64px;
+    height: 20px;
+}
+
+.installmentOptions{
+    width: 100%;
+    height: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
+    color: #303030;
+
+}
+
+.installmentOptions span{
+    font-weight: 700;
+}
+
+.buyItemBtn{
+    width: 158px;
+    height: 40px;
+    background-color: var(--blue);
+    border-radius: 8px;
+    border: none;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 14px;
+    margin: 8px 0px;
+    /* border: 1px solid black; */
+}
+
+.cardIndex{
+    width: 35px;
+    height: 7px;
+    /* border: 1px solid black; */
+    display: flex;
+    background-color: var(--purple);
+}
+
+.productPost{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 38px;
+    margin-bottom: 56px;
+}
+
+.postBanner{
+    width:100%;
+    height: 390px;
+}
+
+.postTextContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    width: 343px;
+    font-family: "Nunito",sans-serif;
+}
+
+.postTextContainer .postTitle{
+    height:34px;
+    line-height: 140%;
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+}
+
+.postTextContainer .postText{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+}
+
+.productInformativeContainer{
+    background-color: #DEDEDE;
+    width: 100%;
+    padding: 28px 0px;
+    margin-bottom: 56px;
+    font-family: "Nunito",sans-serif;
+}
+
+.productInformative{
+    width: 100%;
+    height: 661px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.informativeBanner{
+    width: 349px;
+    height: 349px;
+}
+
+.informativeTitle{
+    width: 100%;
+    height: 28px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.informativeText{
+    width: 350px;
+    height: 242px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+
+.productInformative .productInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.productInformative .productInfo p{
+    /* display: flex; */
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    width: 276px;
+    /* border: 1px solid black; */
+
+}
+
+.productInformative .productInfo::before{
+    /* display: block; */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    background-color: var(--blue);
+    /* z-index: 99999; */
+    content: "";
+    background-image: url("./assets/icons/map-pin.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* border: 1px solid black; */
+}
+
+
+.contactUs{
+    width: 100%;
+    height: 449px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 56px;
+    /* background-image: url("./assets/images/avanti-fourth-banner.png"); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+}
+
+.contactUs img{
+    height: 100%;
+    width: 100%;
+    filter: blur(2px);
+}
+
+.contactUsMessage{
+    position: absolute;
+    width: 100%;
+    background-color: var(--blue);
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.contactUsMessage span{
+    font-family: "Nunito",'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    line-height: 140%;
+    vertical-align: 100%;
+    font-size: 16px;
+    color: var(--white);
+    text-align: center;
+    font-weight: 600;
+}
+
+.signUpContainer{
+    /* border: 1px solid black; */
+    height: 330px;
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    /* margin: 16px 0; */
+}
+
+.signUpCall{
+    width: 100%;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    font-weight: 100%;
+    font-size: 16px;
+}
+
+.signUpCall span{
+    color: var(--blue);
+}
+
+.signUpForm{
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    height: 284px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 16px;  
+    padding: 0 16px;
+ 
+}
+
+.signUpForm > input{
+    width: 100%;
+    margin: 0;
+    height: 48px;
+    /* border: 1px solid black; */
+}
+
+.signUpForm input[type="text"]{
+    border: none;
+    border-radius: 8px;
+    padding: 0px 24.45px;
+    background-color: var(--white);
+    color: #303030;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+.signUpForm input[type="text"]::placeholder{
+    color: #303030;
+    font-weight: 400;
+    font-size: 14px;
+    /* padding: 24.45px 0; */
+}
+
+.agreeTermsContainer{
+    display: flex;
+    column-gap: 8px;
+
+}
+
+.agreeTermsContainer input[type="checkbox"]{
+    border-radius: 4px;
+    border: 1px solid #DDDDDD;
+    width: 16px;
+    height: 16px;
+}
+
+.agreeTermsContainer label{
+    font-weight: 700;
+    font-size: 12px;
+    height: 100%;
+    line-height: 100%;
+    color: #656565;
+}
+
+.agreeTermsContainer label span{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
 
 @media (min-width: 768px){
     .header{

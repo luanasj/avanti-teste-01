@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <title>Avanti</title>
 </head>
 <body>
@@ -66,12 +66,122 @@
                 <span id="shoppingCartQtt">2</span>
                 </div>
             </div>
-
-            
-
-            <!-- usar css para mudar a ordem dos elementos no desktop -->
         </div>
     </header>
-    
+    <main id="main" class="main">
+        <section class="headBanner">
+            <img  class="bannerImg" src="./assets/images/panel-img.png" alt="chair">
+            <div class="bannerText">
+                <div class="upperBannerText">
+                    <span>super</span>
+                    <span>sale</span>
+                </div>
+                <div class="lowerBannerText">
+                    <span>selected items up to</span>
+                    <span>50%off</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="cardWrapper">
+            <div class="cardWrapperHeader">
+                <span class="cardWrapperTitle">Lançamentos</span>
+                <a class="seeMoreLink" href="">Ver mais</a>
+            </div>
+            <ul class="cardList">
+                <li class="cardItem" id="cardItem1">
+                    <a href="#" class="cardLink">
+                        <span class="cardItemStatus">NOVO</span>
+                        <img class="cardImg" src="./assets/images/produto-avanti-Mockup.png" alt="product-picture">
+                        <div class="cardInfo">
+                            <h3 class="cardTitle">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                            <div class="priceContainer">
+                                <div class="cardPriceContainer">
+                                    <span class="previousPrice">R$ 100,00</span>
+                                    <span class="currentPrice">R$79,90</span>
+                                </div>
+                                <span class="itemDiscount">10% off</span>
+                                <span class="installmentOptions">Ou em até <span>10x de R$ 7,90</span></span>
+                            </div>
+                        </div>
+                        <a href=""><button class="buyItemBtn">Comprar</button></a>
+                    </a>
+                </li>
+            </ul>
+            <div class="cardIndex"></div>
+        </div>
+
+        <section class="productPost">
+            <img src="./assets/images/avanti-mug.png" alt="mug-picture" class="postBanner">
+            <div class="postTextContainer">
+                <h6 class="postTitle">Lorem Ipsum</h6>
+                <p class="postText">
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <br><br> Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.
+                </p>
+            </div>
+        </section>
+
+        <section class="productInformativeContainer">
+            <section class="productInformative">
+                <img src="./assets/images/second-avanti-mug.png" alt="" class="informativeBanner">
+                <h6 class="informativeTitle">Lorem Ipsum</h6>
+                <ul class="informativeText">
+                    <li class="productInfo">
+                        <p>
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                        </p>
+                    </li>
+                    <li class="productInfo">
+                        <p>
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                        </p>
+                    </li>
+                    <li class="productInfo">
+                        <p>
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="productPost">
+            <img src="./assets/images/avanti-mug.png" alt="mug-picture" class="postBanner">
+            <div class="postTextContainer">
+                <h6 class="postTitle">Lorem Ipsum</h6>
+                <p class="postText">
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <br><br> Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.
+                </p>
+            </div>
+        </section>
+
+        <section class="contactUs">
+            <img src="./assets/images/avanti-fourth-banner.png" alt="">
+            <div class="contactUsMessage">
+                <span>Entre em contato conosco e verifique a disponibilidade para sua região!</span>
+            </div>
+        </section>
+
+        <section class="signUpContainer">
+            <h5 class="signUpCall">Cadastre-se na nossa <span>newsletter</span></h5>
+            <form action="" class="signUpForm">
+                <input type="text" name="signUpName" id="signUpName"  placeholder="Digite seu nome">
+                <input type="text" name="signUpEmail" id="signUpEmail" placeholder="Digite seu email">
+                <div class="agreeTermsContainer">
+                    <input type="checkbox" name="agreeTermsSignIn" id="agreeTermsSignIn" class="agreeTerms">
+                    <label for="agreeTermsSignIn">Estou de acordo com a <span></span>Política de Privacidade</label>
+                </div>
+                <input type="submit" class="buyItemBtn" value="Cadastrar">
+                
+            </form>
+        </section>
+
+        
+
+
+
+    </main>
+
+
 </body>
 </html>
