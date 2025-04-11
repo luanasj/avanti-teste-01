@@ -266,7 +266,7 @@ input:focus{
 
 .main {
     /* position: relative; */
-    /* width: 100%; */
+    width: 100%;
     padding-top: 184px;
     display: flex;
     flex-direction: column;
@@ -845,11 +845,13 @@ input:focus{
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 40px;
+    margin-bottom: 40px;
 }
 
 .footerMainFrame{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -857,12 +859,18 @@ input:focus{
     row-gap: 48px;
     background-color: #F5F5F5;
     padding: 40px 0;
+    width: 100%;
+}
+
+.footerMainFrame h1{
+    order: 0;
 }
 
 .socialMediaIcons{
     display: flex;
     align-items: center;
-    row-gap: 40px;
+    column-gap: 40px;
+
 }
 
 .footerNavbar{
@@ -870,8 +878,89 @@ input:focus{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid; */
+    border: 0.5px solid var(--medium-gray);
+    border-left: none;
+    border-right: none;
+    width: 100%;
+}
+
+.footerNavbarSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid var(--medium-gray);
+    border-collapse: collapse;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    /* border: 1px solid; */
+}
+
+.footerNavbarSection > *{
+    width: 100%;
+    padding: 0px 16px;
+}
+
+.footerNavbarSection h5{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    margin: 16px 0;
+    height: 22px;
 
 }
+
+.footerNavbarSection h5 span{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%; 
+}
+
+.footerNavbarSection ul{
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    display: hidden;    
+}
+
+.paymentMethods{
+    width: 288.4px;
+    height: 64.67px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.footerDisclaimer{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #303030;
+    width: 358px;
+}
+
+.certificatesIcons{
+    display: flex;
+    column-gap: 24px;
+    border: 1px solid;
+    width: fit-content;
+    /* flex-shrink: 0; */
+}
+
+
+
+
+
+
+
 
 
 
