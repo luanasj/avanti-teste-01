@@ -287,6 +287,7 @@ input:focus{
     display: flex;
     /* position: relative; */
     align-items: center;
+    margin-bottom: 56px;
     /* justify-content: center; */
     
     /* z-index: 1; */
@@ -391,14 +392,20 @@ input:focus{
     /* height: 426px; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    row-gap: 19px;
     align-items: center;
     /* border: 1px solid black; */
-    margin: 50px 0px 36px 0;
+    margin: 0px 0px 36px 0;
+    /* border: 1px solid; */
 
 }
 
-.carouselSectionHeader{
+.carouselSection:last-of-type{
+    display: none;
+}
+
+.carouselSection .carouselSectionHeader{
     width: 100%;
     height: 22px;
     padding: 0px 15px;
@@ -408,7 +415,7 @@ input:focus{
     /* border: 1px solid black; */
 }
 
-.carouselSectionTitle{
+.carouselSection .carouselSectionTitle{
     font-weight: 700;
     font-size: 16px;
     height: 100%;
@@ -416,7 +423,7 @@ input:focus{
     vertical-align: middle;   
 }
 
-.cardWrapper{
+.carouselSection .cardWrapper{
     width: 100%;
     /* margin-bottom: 30px; */
     /* border: 1px solid; */
@@ -428,19 +435,31 @@ input:focus{
 
 
 .cardWrapper .swiper-button-prev, .swiper-button-next{
+    display:none;
     position: absolute;
     background-color: white;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: 1px solid var(--blue);
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
+    /* background-image: url("./assets/icons/iconmonstr-arrow-20.svg");
+    background-repeat: no-repeat;
+    background-position: center; */
 }
 
 .cardWrapper .swiper-button-prev::after, .swiper-button-next::after{
     content: '';
+    background-image: url("./assets/icons/iconmonstr-arrow-20.svg");
+    display: block;
+    height: 11.04px;
+    width: 12.04px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 .cardWrapper .swiper-button-prev{
     left: 0px;
@@ -448,7 +467,9 @@ input:focus{
 
 .cardWrapper .swiper-button-next{
     right: 0;
+    transform: rotate(180deg);
 }
+
 
 .seeMoreLink{
     width: 67px;
