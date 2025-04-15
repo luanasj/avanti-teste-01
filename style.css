@@ -690,13 +690,6 @@ input:focus{
     /* border: 1px solid black; */
 }
 
-.cardIndex{
-    width: 35px;
-    height: 7px;
-    /* border: 1px solid black; */
-    display: flex;
-    background-color: var(--purple);
-}
 
 .productPost{
     width: 100%;
@@ -709,7 +702,19 @@ input:focus{
 
 .postBanner{
     width:100%;
+    max-width: 652px;
     height: 390px;
+    /* border: 1px solid; */
+    background-color: #C2C2C2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.postBanner img{
+    width: 351px;
+    height: auto;
 }
 
 .postTextContainer{
@@ -1143,10 +1148,41 @@ input:focus{
     .headerMessage #headerMessageCoupon{
         font-style: italic;
     }
+
 }
 
 @media (min-width: 1024px){
 
+    .productPost{
+        flex-direction: row;
+        justify-content: center;
+        
+        /* border: 1px solid; */
+        column-gap: 22px;
+    }
+
+    .postBanner{
+        height: 747px;
+    }
+    
+    .postBanner img{
+        width: 586.38px;
+    }
+
+    .postTextContainer{
+        /* border: 1px solid; */
+        width: 487px;
+    }
+
+    .postTextContainer .postTitle{
+        font-size: 30px;
+        height: 42px
+    }
+
+    .postTextContainer .postText{
+        font-size: 18px;
+    }
+    
     .footerMainFrame{
         font-family: "Nunito Sans",sans-serif;
         flex-direction:row ;
