@@ -1155,6 +1155,11 @@ input:focus{
         font-style: italic;
     }
 
+
+    .contactUs > img{
+        height: auto;
+    }
+
 }
 
 @media (min-width: 1024px){
@@ -1311,11 +1316,20 @@ input:focus{
         height: 728.14px;
     }
 
+    .contactUs{
+        height:660px;
+        overflow: hidden;
+    }
+
     .footerMainFrame{
         column-gap: 96px;
     }
     .footerMainFrame .footerNavbar{
         column-gap: 96px;
+    }
+
+    .paymentMethods{
+        width: 100%;
     }
 
     .footerDisclaimer{
