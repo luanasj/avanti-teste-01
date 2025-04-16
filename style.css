@@ -291,12 +291,18 @@ input:focus{
     /* justify-content: center; */
     
     /* z-index: 1; */
+    /* border: 1px solid; */
 }
 
 .bannerImg{
     mix-blend-mode: darken;
     position: absolute;
+    height: 306px;
+    width: auto;
     /* border: 1px solid black; */
+    /* clip-path: inset(0px 0px 0px 140px);  */
+    /* Valores: superior, direita, inferior, esquerda */
+    left: -140px;
 }
 
 .bannerText{
@@ -1144,9 +1150,47 @@ input:focus{
         height: auto;
     }
 
+    .bannerText{
+        margin-left:40% ;
+    }
+
+    .bannerText > *{
+        /* border: 1px solid; */
+   
+        /* width: auto; */
+    
+    }
+    
+    .bannerText .upperBannerText{
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        flex-direction: row;
+    }
+    
+    .upperBannerText span:nth-child(1),.upperBannerText span:nth-child(2){
+        width: auto;
+        /* height: auto */
+    }
+    
+    .bannerText .lowerBannerText{
+   
+    }
+    
+    .lowerBannerText span:nth-child(1){
+        font-size: 20px;
+    }
+    
+    .lowerBannerText span:nth-child(2){
+        font-size: 40px;
+    }
+
+
+
 }
 
 @media (min-width: 1024px){
+    
 
     .carouselSection:last-of-type{
         display: flex;
@@ -1199,6 +1243,72 @@ input:focus{
 }
 
 @media (min-width: 1200px){
+    .headBanner{
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid; */
+        height: 510px;
+    }
+
+    .headBanner > *{
+        /* border: 1px solid; */
+        position: relative;
+    }
+
+    .bannerImg{
+        left: initial;
+        height: 100%;
+        /* right: 25px; */
+        
+    }
+
+    .bannerText{
+    width: auto;
+            /* height: auto; */
+    /* border: 1px solid; */
+    margin: initial;
+    left: -50px;
+    justify-content: center;
+    }
+
+    .bannerText > *{
+        /* border: 1px solid; */
+        flex-direction: row;
+        width: auto;
+    
+    }
+    
+    .bannerText .upperBannerText{
+        justify-content: center;
+        align-items: center;
+        font-size: 90px;
+        height: 136px;
+    }
+    
+    .upperBannerText span:nth-child(1),.upperBannerText span:nth-child(2){
+        width: auto;
+        /* height: auto */
+    }
+    
+    .bannerText .lowerBannerText{
+
+   
+    }
+    
+    .lowerBannerText span:nth-child(1){
+        font-size: 25px;
+        letter-spacing: 0.3em;
+        height:34px;
+    }
+    
+    .lowerBannerText span:nth-child(2){
+        font-size: 60px;
+        height: 82px;
+        /* border: 1px solid; */
+        line-height: 100%;
+        margin-top: 10px;
+    }
+
     .productPost{
         flex-direction: row;
         justify-content: center;

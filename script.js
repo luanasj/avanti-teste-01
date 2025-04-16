@@ -42,6 +42,12 @@ const changeTextOnResize = (el)=>{
     // console.log(el)
     const texts = [
         {
+            destination: ".lowerBannerText .lowerBannerDiscount",
+            mobile: "Selected items up to",
+            desktop: "Itens selecionados com até"
+
+        },
+        {
             destination: ".postTextContainer .postText",
             mobile: "Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.\n\nCras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.",
             desktop: "Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.\n\nDuis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue."
@@ -55,7 +61,7 @@ const changeTextOnResize = (el)=>{
 
     texts.map((text)=>{
         const {destination,mobile,desktop} = text
-        changeElementText(destination,(el.target.innerWidth >=1200 ? desktop : mobile))
+        changeElementText(destination,(el.target.innerWidth >= 1200 ? desktop : mobile))
     })
 }
 
