@@ -1321,6 +1321,15 @@ input:focus{
         overflow: hidden;
     }
 
+    .contactUsMessage{
+        height: 132px
+    }
+
+    .contactUsMessage span{
+        font-size: 30px;
+        font-weight: 400;
+    }
+
     .footerMainFrame{
         column-gap: 96px;
     }
