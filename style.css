@@ -877,7 +877,7 @@ input:focus{
     text-align: center;
     height: 22px;
     line-height: 22px;
-    font-weight: 100%;
+    font-weight: 700;
     font-size: 16px;
 }
 
@@ -895,8 +895,10 @@ input:focus{
     justify-content: center;
     row-gap: 16px;  
     padding: 0 16px;
+    /* border: 1px solid; */
  
 }
+
 
 .signUpForm > input{
     width: 100%;
@@ -940,7 +942,8 @@ input:focus{
     font-weight: 700;
     font-size: 12px;
     height: 100%;
-    line-height: 100%;
+    /* border: 1px solid; */
+    /* line-height: 100%; */
     color: #656565;
 }
 
@@ -1310,6 +1313,41 @@ input:focus{
         font-size: 30px;
         font-weight: 400;
     }
+
+    .signUpContainer{
+        width: 100%;
+        max-width: 1260px;
+        height: 227px;
+         /* margin: 16px 0; */
+    }
+    
+    .signUpCall{
+        height: 27px;
+        line-height: 27px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    
+    
+    .signUpForm{
+        height: 176px;
+        flex-direction: row;
+        column-gap: 24px;  
+        /* border: 1px solid; */
+    }
+
+
+    
+    .signUpForm > input{
+        width: 280px;
+
+        /* border: 1px solid black; */
+    }
+    
+    .signUpForm input[type="submit"]{
+        width: 121px;
+    }
+
 
     .footerMainFrame{
         column-gap: 96px;
