@@ -54,9 +54,8 @@ const changeTextOnResize = (el)=>{
     ]
 
     texts.map((text)=>{
-        console.log(el)
         const {destination,mobile,desktop} = text
-        changeElementText(destination,(el.target.innerWidth >=1024 ? desktop : mobile))
+        changeElementText(destination,(el.target.innerWidth >=1200 ? desktop : mobile))
     })
 }
 
