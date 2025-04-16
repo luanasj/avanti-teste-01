@@ -38,7 +38,7 @@ const changeElementText = (selector,text)=>{
     })
 }
 
-const changeTextOnResize = (el)=>{
+const changeTextOnResize = (width)=>{
     // console.log(el)
     const texts = [
         {
@@ -61,16 +61,20 @@ const changeTextOnResize = (el)=>{
 
     texts.map((text)=>{
         const {destination,mobile,desktop} = text
-        changeElementText(destination,(el.target.innerWidth >= 1200 ? desktop : mobile))
+        changeElementText(destination,( width >= 1200 ? desktop : mobile))
     })
 }
 
 
-window.addEventListener('resize',(el)=>{
-    changeTextOnResize(el)
+window.addEventListener('resize',(evt)=>{
+    changeTextOnResize(evt.target.innerWidth)
 }
-
 )
+
+window.document.addEventListener('DOMContentLoaded', (evt)=>{
+    // console.log()
+    changeTextOnResize(evt.target.body.clientWidth)
+})
 
 
 
