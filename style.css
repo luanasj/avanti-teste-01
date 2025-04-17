@@ -1317,6 +1317,7 @@ input:focus{
     .navbarContainer{
         order: 2;
         display: flex;
+        align-items: center;
         width: 100%;
         /* border: 1px solid; */
         column-gap: 45px;
@@ -1339,7 +1340,6 @@ input:focus{
         justify-content: center;
         font-size: 14px;
         width: auto;
-    
     }
 
     .headerNavbar{
@@ -1347,6 +1347,7 @@ input:focus{
         align-items: center;
         width: 100%;
         height: 100%;
+        /* border: 1px solid; */
     }
 
     .headerNavbar ul{
@@ -1359,7 +1360,12 @@ input:focus{
         font-size: 14px;
         font-weight: 400;
         width: 91px;
+        /* border: 1px solid; */
 
+    }
+
+    .headerNavbar li:hover{
+        color:var(--blue);
     }
 
     #showNavbarBtn{
