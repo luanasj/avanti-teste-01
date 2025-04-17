@@ -1160,6 +1160,10 @@ input:focus{
         font-style: italic;
     }
 
+    .main{
+        padding-top: 162px;
+    }
+
 
     .contactUs > img{
         height: auto;
@@ -1330,20 +1334,89 @@ input:focus{
         display: flex;
         align-items: center;
         width: 100%;
-        /* border: 1px solid; */
+        border: 1px solid;
         column-gap: 45px;
         flex-wrap: wrap;
     
     }
 
+    /* .navbarContainer > *{
+        border: 1px solid;
+    } */
+    .homeMenu{
+        top: 162px;
+        position: fixed;
+        width: 1261px;
+        height: 329px;
+        background-color: var(--white);
+        /* display: flex; */
+        justify-content: space-between;
+        align-items:end;
+        /* padding-right: 38px;
+        padding-bottom: 25px; */
+        border: 1px solid;
+    }
+
+    .homeMenu .menuBanner{
+        /* position: relative; */
+        /* border: 1px solid; */
+        width: 236px;
+        height: 298px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        border-radius: 10px;
+        background-image: linear-gradient(to left,rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0)), url('./assets/images/fddcc3c04ff1d6642924d03885fdbea3.png');
+        background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+        background-position: center; /* Centraliza a imagem */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0px 30px;
+    }
+
+    .homeMenu .menuBannerMessage{
+        /* position: absolute; */
+        width: 126.71px;
+        /* height: 207.11px; */
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--white);
+        /* border: 1px solid; */
+    }
+
+    .homeMenu .menuBannerMessage > button {
+        width: 100%;
+        border: 1px solid var(--white);
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 12px;
+        height: 38px;
+        margin-top: 30px;
+    }
+
+    .homeMenu .menuBannerMessage span{
+        line-height: 27px;
+    }
+
+    .homeMenu .menuBannerMessage span:nth-child(3){
+        font-weight: 700;
+    }
+
+
     #showNavbarBtn:hover {
         color: var(--blue);
-
     }
+
     #showNavbarBtn:hover #navbarIcon div{
         border-color: var(--blue);
 
     }
+
+    #showNavbarBtn:hover ~ .homeMenu{
+        display:flex;
+    }
+
+
     #showNavbarBtn #navbarTitle{
         flex-shrink: 0;
         display: flex;
@@ -1357,7 +1430,7 @@ input:focus{
     .headerNavbar{
         display: flex;
         align-items: center;
-        width: 100%;
+        /* width: 100%; */
         height: 100%;
         /* border: 1px solid; */
     }

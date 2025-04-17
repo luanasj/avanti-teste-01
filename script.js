@@ -83,3 +83,18 @@ window.document.querySelectorAll(".footerNavbarSection h5 img").forEach((section
         console.log(evt.target.parentNode.parentNode.querySelector('ul').classList)
     })
 })
+
+
+window.document.querySelectorAll(".headerNavbar .department").forEach((dep)=>{
+    const homeMenu = window.document.querySelector('.navbarContainer .homeMenu')
+    
+
+    dep.addEventListener('mouseenter',()=>{
+        homeMenu.classList.add('showContent')
+    })
+
+    dep.addEventListener('mouseleave',()=>{
+        homeMenu.classList.remove('showContent')
+    })
+
+})
