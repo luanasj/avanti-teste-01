@@ -1081,9 +1081,9 @@ input:focus{
     align-items: flex-start;
     justify-content: center; 
     width: 100%;
-    display: none;
+    /* display: none; */
     color: #303030;
-    display: none;
+    /* display: none; */
     /* font-size: 14px; */
 }
 
@@ -1124,9 +1124,16 @@ input:focus{
     margin-right: 5px;
 }
 
+.hideContent{
+    display:none;
+}
 
 .showContent{
     display: flex;
+}
+
+.footerRotation{
+   transform: rotate(180deg);
 }
 
 

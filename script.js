@@ -76,5 +76,10 @@ window.document.addEventListener('DOMContentLoaded', (evt)=>{
     changeTextOnResize(evt.target.body.clientWidth)
 })
 
-
-
+window.document.querySelectorAll(".footerNavbarSection h5 img").forEach((section)=>{
+    section.addEventListener('click',(evt)=>{
+        evt.target.classList.toggle('footerRotation')
+        evt.target.parentNode.parentNode.querySelector('ul').classList.toggle("hideContent")
+        console.log(evt.target.parentNode.parentNode.querySelector('ul').classList)
+    })
+})
