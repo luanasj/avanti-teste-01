@@ -149,11 +149,11 @@ input:focus{
 }
 
 #showNavbarBtn #navbarTitle{
-    width: 130px;
+    /* width: 130px; */
     display: none;
 }
 
-.navbar {
+.headerNavbar {
     display: none;
 }
 
@@ -213,6 +213,10 @@ input:focus{
     display: flex;
     /* height: calc(24.16px + 21px*0.4); */
     width: calc(25.04px + 21px*0.5);
+}
+
+.seeProfile{
+    display: none;
 }
 
 .shoppingCart #shoppingCartQtt{
@@ -1243,6 +1247,152 @@ input:focus{
 }
 
 @media (min-width: 1200px){
+    /* .headerContent  *{
+        display: flex;
+        border: 1px solid;
+    } */
+
+    .titleSearchContainer{
+        order:0;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* height: auto; */
+        width: auto;
+        column-gap: 65px;
+        /* border: 1px solid; */
+    }  
+
+
+    .titleSearchContainer .siteTitle{
+        flex-shrink: 0;
+        /* background-color: #005CFF; */
+        width: 152.58px;        
+    }
+
+    .titleSearchContainer #headerSearchBar{
+        width: 594px;
+        /* flex-shrink: 0; */
+    }
+
+    .shoppingCartProfileContainer{
+        order:1;
+        display: flex;
+        /* border: 1px solid; */
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        column-gap: 24px;    
+    }
+
+    .seeProfile{
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+
+    .seeProfile span{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .shoppingCart{
+        width: 24.74px;
+        /* height: auto; */
+        /* border: 1px solid; */
+    }
+
+    .shoppingCart img{
+        width: 24.74px;
+        height: 24px;
+    }
+
+    .shoppingCart #shoppingCartQtt{
+        right: -40%;
+        top: -40%;
+    }
+
+    .navbarContainer{
+        order: 2;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        /* border: 1px solid; */
+        column-gap: 45px;
+    
+    }
+
+    #showNavbarBtn:hover {
+        color: var(--blue);
+
+    }
+    #showNavbarBtn:hover #navbarIcon div{
+        border-color: var(--blue);
+
+    }
+    #showNavbarBtn #navbarTitle{
+        flex-shrink: 0;
+        display: flex;
+        /* border: 1px solid; */
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        width: auto;
+    }
+
+    .headerNavbar{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid; */
+    }
+
+    .headerNavbar ul{
+        display: flex;
+        column-gap: 45px;
+        /* border: 1px solid; */
+    }
+
+    .headerNavbar li{
+        font-size: 14px;
+        font-weight: 400;
+        width: 91px;
+        /* border: 1px solid; */
+
+    }
+
+    .headerNavbar li:hover{
+        color:var(--blue);
+    }
+
+    #showNavbarBtn{
+        align-items: center;
+    }
+
+    #showNavbarBtn #navbarIcon{
+        flex-shrink: 0;
+        /* height: 100%; */
+        width: 14px;
+        height: 10px;
+        margin-right: 8px;
+
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; */
+        /* align-items: center; */
+        /* border: 1px solid; */
+
+    }
+
+    #showNavbarBtn #navbarIcon div{
+        border-width: 2px solid;
+    }
+
+
     .headBanner{
         justify-content: center;
         align-items: center;
@@ -1258,8 +1408,7 @@ input:focus{
     .bannerImg{
         left: initial;
         height: 100%;
-        /* right: 25px; */
-        
+        /* right: 25px; */    
     }
 
     .bannerText{
@@ -1474,8 +1623,6 @@ input:focus{
         max-width: 1074px;
     }
 }
-
-
 
 
 
