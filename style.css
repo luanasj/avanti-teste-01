@@ -65,6 +65,7 @@ input:focus{
     height: 184px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: fixed;
     box-shadow: 0 3px 3px 0 #0000000D;
     /* border: 1px solid black; */
@@ -106,6 +107,7 @@ input:focus{
 
 .headerContent{
     width:100%;
+    /* max-width: 1270px; */
     height: 132px;
     display: flex;
     flex-wrap: wrap;
@@ -1262,10 +1264,14 @@ input:focus{
 }
 
 @media (min-width: 1200px){
-    /* .headerContent  *{
-        display: flex;
+    .headerContent{
+        /* display: flex; */
         border: 1px solid;
-    } */
+        column-gap: 65px;
+        /* justify-content: center; */
+        max-width: 1259px;
+        padding: 0;
+    }
 
     .titleSearchContainer{
         order:0;
@@ -1333,7 +1339,7 @@ input:focus{
         order: 2;
         display: flex;
         align-items: center;
-        width: 100%;
+        width: auto;
         /* border: 1px solid; */
         column-gap: 45px;
         flex-wrap: wrap;
