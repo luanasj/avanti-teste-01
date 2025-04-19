@@ -1266,8 +1266,8 @@ input:focus{
 @media (min-width: 1200px){
     .headerContent{
         /* display: flex; */
-        border: 1px solid;
-        column-gap: 65px;
+        /* border: 1px solid; */
+        /* column-gap: 65px; */
         /* justify-content: center; */
         max-width: 1259px;
         padding: 0;
