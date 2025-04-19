@@ -1334,7 +1334,7 @@ input:focus{
         display: flex;
         align-items: center;
         width: 100%;
-        border: 1px solid;
+        /* border: 1px solid; */
         column-gap: 45px;
         flex-wrap: wrap;
     
@@ -1354,7 +1354,11 @@ input:focus{
         align-items:end;
         /* padding-right: 38px;
         padding-bottom: 25px; */
-        border: 1px solid;
+        /* border: 1px solid; */
+        padding-top: 20px;
+        padding-bottom: 10px;
+        box-shadow: 0 3px 3px 0 #0000000D;
+
     }
 
     .homeMenu .menuBanner{
@@ -1362,7 +1366,7 @@ input:focus{
         /* border: 1px solid; */
         width: 236px;
         height: 298px;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
         margin-right: 20px;
         border-radius: 10px;
         background-image: linear-gradient(to left,rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0)), url('./assets/images/fddcc3c04ff1d6642924d03885fdbea3.png');
@@ -1401,6 +1405,94 @@ input:focus{
     .homeMenu .menuBannerMessage span:nth-child(3){
         font-weight: 700;
     }
+
+    .menuNavigationContent{
+        height: 100%;
+        display: flex;
+    }
+
+    .homeMenu .menuDepartmentsLinks{
+        width: 220px;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        /* border: 1px solid; */
+        padding: 0 8px;
+       
+    }
+
+    .menuDepartmentsLinks::-webkit-scrollbar-button{
+        display: none;
+    }
+
+    /* Estiliza a área da barra de rolagem */
+    .homeMenu .menuDepartmentsLinks::-webkit-scrollbar {
+    width: 3px; /* largura da barra */  }
+  
+  /* Estiliza o trilho da barra */
+  .homeMenu .menuDepartmentsLinks::-webkit-scrollbar-track {
+    background: #F5F5F5; /* cor do fundo do trilho */
+    border-radius: 3px; /* borda arredondada */
+  }
+  
+  /* Estiliza o polegar da barra (parte que desliza) */
+  .homeMenu .menuDepartmentsLinks::-webkit-scrollbar-thumb {
+    background: #CECECE; /* cor do polegar */
+    border-radius: 3px; /* borda arredondada */
+    /* border: 2px solid #f4f4f4; borda do polegar */
+  }
+  
+  /* Estiliza o polegar quando o usuário o está usando (ativa) */
+  .homeMenu .menuDepartmentsLinks::-webkit-scrollbar-thumb:hover {
+    background: #555; /* cor ao passar o mouse */
+  }
+  
+
+    .homeMenu .menuDepartmentsLinks .menuDepartment a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        /* border: 1px solid; */
+        height: 19px;
+        line-height: 19px;
+        vertical-align: middle;
+        color: #303030;
+        fill: #303030;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .homeMenu .menuDepartmentsLinks .menuDepartment a svg{
+        fill: #303030;
+
+    }
+
+    .categoriesContainer {
+        height: 100%;
+        display: flex;
+        padding: 0px 40px;
+        column-gap: 60px;
+    }
+
+    .categoriesContainer .categoriesColumn{
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        color: #656565;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .categoriesContainer .categoriesColumn *{
+        height: 19px;
+        line-height: 19px;
+        vertical-align: middle;
+    }
+
+    
 
 
     #showNavbarBtn:hover {
