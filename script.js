@@ -98,3 +98,18 @@ window.document.querySelectorAll(".headerNavbar .department").forEach((dep)=>{
     })
 
 })
+
+const addNavContentToHomeMenu = (childHTMLElements)=>{
+    const navigationContainer = document.querySelector('.menuNavigationContent')
+
+    childHTMLElements.map((el)=>{
+        navigationContainer.appendChild(el)
+        console.log("Elemento adicionado")
+    })
+}
+
+const newDiv = document.createElement('div')
+newDiv.innerHTML = "O AMOR É LINDO"
+newDiv.style.border = '1px solid'
+
+addNavContentToHomeMenu([newDiv])
