@@ -1426,7 +1426,7 @@ input:focus{
         flex-direction: column;
         row-gap: 12px;
         /* border: 1px solid; */
-        padding: 0 8px;
+        padding: 0 18px;
        
     }
 
@@ -1480,8 +1480,22 @@ input:focus{
     .categoriesContainer {
         height: 100%;
         display: flex;
+        flex-wrap: wrap;
         padding: 0px 40px;
-        column-gap: 60px;
+        column-gap: 120px;
+        /* border: 1px solid; */
+        align-content: flex-start;
+    }
+
+    .categoriesContainer .categoriesTitle{
+        width: 100%;
+        font-weight: 700;
+        font-size: 16px;
+        height: 22px;
+        line-height: 22px;
+        /* border: 1px solid; */
+        margin-bottom: 12px;
+
     }
 
     .categoriesContainer .categoriesColumn{
@@ -1491,6 +1505,7 @@ input:focus{
         color: #656565;
         font-weight: 400;
         font-size: 14px;
+        /* border: 1px solid; */
     }
     .categoriesContainer .categoriesColumn *{
         height: 19px;
