@@ -148,16 +148,39 @@ const homeMenuDepartments = (departments)=>{
 
 }
 
-// fetch("./assets/files/departments.json")
-// .then(res=>res.json())
-// .then(dados=>console.log(dados))
+const homeMenuCategories = (department,title)=>{
+    const categoriesContainer = document.createElement("div")
+    categoriesContainer.classList.add("categoriesContainer")
 
+    if(title){
+        categoriesContainer.innerHTML+= `<h6 class="categoriesTitle">${title}</h6>`
+    }
 
+    const categories = department.categorias
+    const columns = Math.ceil(categories.length / 8)
+
+    for(let i = 0;i<columns;i++){
+        const categoriesColumn = document.createElement('ul')
+        categoriesColumn.classList.add("categoriesColumn")
+
+        const columnRows = categories.slice(8*i, 8*i+7)
+
+        columnRows.map((row)=>{
+            categoriesColumn.innerHTML += `<li><a href=${row.url}>${row.nome}</a></li>`
+        })
+
+        categoriesContainer.appendChild(categoriesColumn)
+    }
+
+    return categoriesContainer
+}
 
 const buildHomeMenuContent = async (dataURL)=>{
     const dados = await fetch(dataURL)
     const departments = await dados.json()
-    addNavContentToHomeMenu([homeMenuDepartments(departments)])
+    addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[1])])
+
+    
 }
 
 buildHomeMenuContent("./assets/files/departments.json")
