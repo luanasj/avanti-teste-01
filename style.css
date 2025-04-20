@@ -1470,6 +1470,7 @@ input:focus{
         fill: #303030;
         font-size: 14px;
         font-weight: 400;
+        text-transform: capitalize;
     }
 
     .homeMenu .menuDepartmentsLinks .menuDepartment a svg{
