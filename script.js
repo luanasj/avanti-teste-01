@@ -65,6 +65,10 @@ const changeTextOnResize = (width)=>{
     })
 }
 
+// const changeIconsOnResize = ()=>{
+
+// }
+
 
 window.addEventListener('resize',(evt)=>{
     changeTextOnResize(evt.target.innerWidth)
@@ -117,9 +121,23 @@ const homeMenuCategories = (department,title)=>{
 
         const columnRows = categories.slice(8*i, 8*i+7)
 
+        let isFirstElement = true
+
         columnRows.map((row)=>{
             if(row.nome){
-                categoriesColumn.innerHTML += `<li><a href=${row.url}>${row.nome}</a></li>`
+                const rowItem = document.createElement('li')
+                rowItem.innerHTML += `<a href=${row.url}>${row.nome}</a>`
+
+                if(isFirstElement){
+                    rowItem.classList.add("emphasizedItem")
+                    isFirstElement = false
+                }
+
+                rowItem.addEventListener('mouseEnter',(evt=>{
+                    evt.target.parentNode.querySelector("emphasizedItem").classList.remove("emphasizedItem")
+            }))
+
+                categoriesColumn.appendChild(rowItem)
             }
         })
 
@@ -130,13 +148,17 @@ const homeMenuCategories = (department,title)=>{
 }
 
 const homeMenuDepartments = (departments)=>{
+
     const departmentsList = document.createElement('ul')
     departmentsList.classList.add('menuDepartmentsLinks')
-    
-    const homeMenuDepartmentOnMouseEnterHandler = (dep)=>{
+
+    const homeMenuDepartmentOnMouseEnterHandler = (evt,dep)=>{
+        evt.target.parentNode.querySelector(".emphasizedItem").classList.remove("emphasizedItem")
         removeElement(".categoriesContainer")
         addNavContentToHomeMenu([homeMenuCategories(dep)])
     }
+
+    let isFirstElement = true
 
     departments.map((department)=>{
         const listItem = document.createElement('li')
@@ -145,11 +167,16 @@ const homeMenuDepartments = (departments)=>{
 
         const listItemLink = document.createElement('a')
         listItemLink.href = `${department.url}`
+        if(isFirstElement){
+            listItemLink.classList.add("emphasizedItem")
+            isFirstElement = false
+        }
         listItem.appendChild(listItemLink)
+
 
         listItemLink.innerHTML += `<span>${department.nome}</span><svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4.45948 5.03932L1.27979 8.27623C0.987123 8.57459 0.512778 8.57459 0.219501 8.27623C-0.0731669 7.97892 -0.0731669 7.49559 0.219501 7.1978L2.86978 4.49986L0.219501 1.80232C-0.0731669 1.50453 -0.0731669 1.02185 0.219501 0.723405C0.512778 0.425531 0.987123 0.425531 1.27979 0.723405L4.45948 3.96032C4.60614 4.10958 4.67943 4.3048 4.67943 4.50002C4.67943 4.69524 4.60614 4.89038 4.45948 5.03932Z"/> </svg>`
     
-        listItem.addEventListener("mouseenter", ()=>{homeMenuDepartmentOnMouseEnterHandler(department)})
+        listItem.addEventListener("mouseenter", (evt)=>{homeMenuDepartmentOnMouseEnterHandler(evt,department)})
 
         departmentsList.appendChild(listItem)
     })
@@ -186,7 +213,7 @@ const addNavbarDepartments = (departments)=>{
 
 
     for(let i = 0;i<8;i++){
-        const departmentData = departments[0]
+        const departmentData = departments[i]
 
         const listDepartment = document.createElement('li')
         listDepartment.classList.add('department')

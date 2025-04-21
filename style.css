@@ -1467,7 +1467,7 @@ input:focus{
         line-height: 19px;
         vertical-align: middle;
         color: #303030;
-        fill: #303030;
+        /* fill: #303030; */
         font-size: 14px;
         font-weight: 400;
         text-transform: capitalize;
@@ -1475,7 +1475,15 @@ input:focus{
 
     .homeMenu .menuDepartmentsLinks .menuDepartment a svg{
         fill: #303030;
+    }
 
+    .homeMenu .menuDepartmentsLinks .menuDepartment:hover a{
+        color: var(--blue);
+        font-weight: 700;
+    }
+
+    .homeMenu .menuDepartmentsLinks .menuDepartment:hover a svg{
+        fill: var(--blue);
     }
 
     .categoriesContainer {
@@ -1516,6 +1524,10 @@ input:focus{
         text-transform: capitalize;
     }
 
+    .categoriesContainer .categoriesColumn *:hover{
+        color: var(--blue);
+    }
+
     #showNavbarBtn:hover {
         color: var(--blue);
     }
@@ -1527,6 +1539,14 @@ input:focus{
 
     #showNavbarBtn:hover ~ .homeMenu{
         display:flex;
+    }
+
+    .emphasizedItem{
+        color: var(--blue) !important; 
+    }
+
+    .emphasizedItem svg{
+        fill: var(--blue) !important;
     }
 
 
