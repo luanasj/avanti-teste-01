@@ -284,3 +284,31 @@ const buildHomeMenuContent = async (dataURL)=>{
 
 buildHomeMenuContent("./assets/files/departments.json")
 
+document.querySelectorAll(".cardList.swiper-wrapper").forEach((el)=>{
+    for(let i =0;i<8;i++){
+        const cardItem = document.createElement('li')
+        cardItem.classList.add('swiper-slide')
+        cardItem.classList.add('cardItem')
+        cardItem.innerHTML = `<a href="#" class="cardLink">
+                            <span class="cardItemStatus">NOVO</span>
+                            <img class="cardImg" src="./assets/images/produto-avanti-Mockup.png" alt="product-picture">
+                            <div class="cardInfo">
+                                <h3 class="cardTitle">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="priceContainer">
+                                    <div class="cardPriceContainer">
+                                        <span class="previousPrice">R$ 100,00</span>
+                                        <span class="currentPrice">R$79,90</span>
+                                    </div>
+                                    <span class="itemDiscount">10% off</span>
+                                    <span class="installmentOptions">Ou em até <span>10x de R$ 7,90</span></span>
+                                </div>
+                            </div>
+                            <a href="" class="buyItemBtn" ><button>Comprar</button></a>
+                        </a>`
+
+        el.appendChild(cardItem)
+    }
+})
+
+
+
