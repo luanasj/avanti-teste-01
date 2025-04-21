@@ -2,19 +2,16 @@ new Swiper('.swiper', {
     loop: true,
     spaceBetween: 17,
   
-    // If we need pagination
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
   
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
 
-    //Responsive breakpoints
     breakpoints: {
         0: {
             slidesPerView: 2
@@ -39,7 +36,6 @@ const changeElementText = (selector,text)=>{
 }
 
 const changeTextOnResize = (width)=>{
-    // console.log(el)
     const texts = [
         {
             destination: ".lowerBannerText .lowerBannerDiscount",
@@ -112,10 +108,9 @@ window.document.querySelector(".searchBar .searchButton").addEventListener('clic
 
 
 window.document.querySelectorAll(".footerNavbarSection h5 img").forEach((section)=>{
-    section.addEventListener('click',(evt)=>{
-        evt.target.classList.toggle('footerRotation')
-        evt.target.parentNode.parentNode.querySelector('ul').classList.toggle("hideContent")
-        console.log(evt.target.parentNode.parentNode.querySelector('ul').classList)
+    section.parentNode.addEventListener('click',(evt)=>{
+        section.classList.toggle('footerRotation')
+        section.parentNode.parentNode.querySelector('ul').classList.toggle("hideContent")
     })
 })
 
@@ -125,7 +120,6 @@ const addNavContentToHomeMenu = (childHTMLElements)=>{
 
     childHTMLElements.map((el)=>{
         navigationContainer.appendChild(el)
-        // console.log("Elemento adicionado")
     })
 }
 
@@ -278,9 +272,36 @@ const buildHomeMenuContent = async (dataURL)=>{
         
         addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[0])])
     })
-    // addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[0])])
  
 }
 
 buildHomeMenuContent("./assets/files/departments.json")
+
+document.querySelectorAll(".cardList.swiper-wrapper").forEach((el)=>{
+    for(let i =0;i<8;i++){
+        const cardItem = document.createElement('li')
+        cardItem.classList.add('swiper-slide')
+        cardItem.classList.add('cardItem')
+        cardItem.innerHTML = `<a href="#" class="cardLink">
+                            <span class="cardItemStatus">NOVO</span>
+                            <img class="cardImg" src="./assets/images/produto-avanti-Mockup.png" alt="product-picture">
+                            <div class="cardInfo">
+                                <h3 class="cardTitle">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="priceContainer">
+                                    <div class="cardPriceContainer">
+                                        <span class="previousPrice">R$ 100,00</span>
+                                        <span class="currentPrice">R$79,90</span>
+                                    </div>
+                                    <span class="itemDiscount">10% off</span>
+                                    <span class="installmentOptions">Ou em até <span>10x de R$ 7,90</span></span>
+                                </div>
+                            </div>
+                            <a href="" class="buyItemBtn" ><button>Comprar</button></a>
+                        </a>`
+
+        el.appendChild(cardItem)
+    }
+})
+
+
 
