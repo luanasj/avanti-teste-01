@@ -257,6 +257,7 @@ input:focus{
     /* width: 80%; */
     height: 14px;
     line-height: 14px;
+    vertical-align: middle;
     font-size: 12px;
     font-weight: 600;
     bottom: -16px;
@@ -291,7 +292,8 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .homeMenu{
-    display:none;
+    display: none;
+
 }
 
 .main {
@@ -1153,6 +1155,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .showContent{
     display: flex;
+    /* opacity: 1; */
 }
 
 .footerRotation{
@@ -1385,6 +1388,10 @@ input[type="search"]::-webkit-search-cancel-button {
         padding-top: 20px;
         padding-bottom: 10px;
         box-shadow: 0 3px 3px 0 #0000000D;
+        display: flex;
+        visibility: hidden;
+        transition: opacity 1s ease-in-out;
+        opacity: 0;
 
     }
 
@@ -1547,6 +1554,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
     .categoriesContainer .categoriesColumn *:hover{
         color: var(--blue);
+        font-weight: 700;
     }
 
     #showNavbarBtn:hover {
@@ -1559,11 +1567,19 @@ input[type="search"]::-webkit-search-cancel-button {
     }
 
     #showNavbarBtn:hover ~ .homeMenu{
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
         display:flex;
+        visibility: visible;
     }
 
     .emphasizedItem{
         color: var(--blue) !important; 
+        
+    }
+
+    .emphasizedItem *{
+        font-weight: 700;
     }
 
     .emphasizedItem svg{
@@ -1860,6 +1876,13 @@ input[type="search"]::-webkit-search-cancel-button {
 
     .footerDisclaimer{
         max-width: 1074px;
+    }
+
+    .showContent{
+        transition: opacity 1s ease-in-out;
+        display: flex;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
