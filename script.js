@@ -85,26 +85,12 @@ window.document.querySelectorAll(".footerNavbarSection h5 img").forEach((section
 })
 
 
-window.document.querySelectorAll(".headerNavbar .department").forEach((dep)=>{
-    const homeMenu = window.document.querySelector('.navbarContainer .homeMenu')
-    
-
-    dep.addEventListener('mouseenter',()=>{
-        homeMenu.classList.add('showContent')
-    })
-
-    dep.addEventListener('mouseleave',()=>{
-        homeMenu.classList.remove('showContent')
-    })
-
-})
-
 const addNavContentToHomeMenu = (childHTMLElements)=>{
     const navigationContainer = document.querySelector('.menuNavigationContent')
 
     childHTMLElements.map((el)=>{
         navigationContainer.appendChild(el)
-        console.log("Elemento adicionado")
+        // console.log("Elemento adicionado")
     })
 }
 
@@ -172,13 +158,71 @@ const homeMenuDepartments = (departments)=>{
 
 }
 
+const showContentOnHoveringNavbar = ()=>{
+    window.document.querySelectorAll(".headerNavbar .department").forEach((dep)=>{
+        const homeMenu = window.document.querySelector('.navbarContainer .homeMenu')
+        
+    
+        dep.addEventListener('mouseenter',()=>{
+            homeMenu.classList.add('showContent')
+        })
+    
+        dep.addEventListener('mouseleave',()=>{
+            homeMenu.classList.remove('showContent')
+        })
+    })
+
+}
+
+const addNavbarDepartments = (departments)=>{
+    const navbarList = document.createElement('ul')
+
+    const navbarDepartmentMouseEnterHandler = (dep) =>{
+        if(document.querySelector(".menuNavigationContent").children.length > 0){
+            [...document.querySelector(".menuNavigationContent").children].forEach(child=>child.remove())
+        }
+        addNavContentToHomeMenu([homeMenuCategories(dep, dep.nome)])        
+    }
+
+
+    for(let i = 0;i<8;i++){
+        const departmentData = departments[0]
+
+        const listDepartment = document.createElement('li')
+        listDepartment.classList.add('department')
+        listDepartment.id = `department${departmentData.id}`
+
+        listDepartment.innerHTML += `<a href="${departmentData.url}">${departmentData.nome}</a>`
+
+        listDepartment.addEventListener("mouseenter",()=>{navbarDepartmentMouseEnterHandler(departmentData)})
+        
+        navbarList.appendChild(listDepartment)
+    }
+
+    const headerNavbar = document.querySelector('.headerNavbar')
+    
+    if(headerNavbar.children.length > 0) {
+        [...headerNavbar.children].forEach(child=>child.remove())
+    }
+    headerNavbar.appendChild(navbarList)
+
+    showContentOnHoveringNavbar()
+}
 
 const buildHomeMenuContent = async (dataURL)=>{
     const dados = await fetch(dataURL)
     const departments = await dados.json()
 
-    addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[0])])
-   
+    addNavbarDepartments(departments)
+    
+    document.querySelector('.navbarContainer #showNavbarBtn').addEventListener('mouseenter',()=>{
+        [...document.querySelector('.homeMenu .menuNavigationContent').children]?.forEach(el=>el.remove())
+        
+        addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[0])])
+    })
+    // addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[0])])
+ 
 }
 
 buildHomeMenuContent("./assets/files/departments.json")
+
