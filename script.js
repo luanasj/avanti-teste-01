@@ -112,10 +112,10 @@ window.document.querySelector(".searchBar .searchButton").addEventListener('clic
 
 
 window.document.querySelectorAll(".footerNavbarSection h5 img").forEach((section)=>{
-    section.addEventListener('click',(evt)=>{
-        evt.target.classList.toggle('footerRotation')
-        evt.target.parentNode.parentNode.querySelector('ul').classList.toggle("hideContent")
-        console.log(evt.target.parentNode.parentNode.querySelector('ul').classList)
+    section.parentNode.addEventListener('click',(evt)=>{
+        section.classList.toggle('footerRotation')
+        section.parentNode.parentNode.querySelector('ul').classList.toggle("hideContent")
+        // console.log(evt.target.parentNode.parentNode.querySelector('ul').classList)
     })
 })
 
