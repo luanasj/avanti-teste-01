@@ -132,7 +132,9 @@ const homeMenuCategories = (department,title)=>{
         const columnRows = categories.slice(8*i, 8*i+7)
 
         columnRows.map((row)=>{
-            categoriesColumn.innerHTML += `<li><a href=${row.url}>${row.nome}</a></li>`
+            if(row.nome){
+                categoriesColumn.innerHTML += `<li><a href=${row.url}>${row.nome}</a></li>`
+            }
         })
 
         categoriesContainer.appendChild(categoriesColumn)
@@ -142,7 +144,6 @@ const homeMenuCategories = (department,title)=>{
 }
 
 const homeMenuDepartments = (departments)=>{
-    // console.log(departments)
     const departmentsList = document.createElement('ul')
     departmentsList.classList.add('menuDepartmentsLinks')
     
@@ -175,7 +176,7 @@ const homeMenuDepartments = (departments)=>{
 const buildHomeMenuContent = async (dataURL)=>{
     const dados = await fetch(dataURL)
     const departments = await dados.json()
-    
+
     addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[0])])
    
 }
