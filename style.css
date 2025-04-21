@@ -248,6 +248,24 @@ input:focus{
     /* max-width: ; */
     /* background-color: #005CFF; */
     order: 3;
+    position:relative;
+}
+
+.showSearchContent{
+    position: absolute;
+    /* border:1px solid; */
+    /* width: 80%; */
+    height: 14px;
+    line-height: 14px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 600;
+    bottom: -16px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 #headerSearchBar #headerSearchInput{
@@ -274,7 +292,8 @@ input:focus{
 }
 
 .homeMenu{
-    display:none;
+    display: none;
+
 }
 
 .main {
@@ -1136,6 +1155,7 @@ input:focus{
 
 .showContent{
     display: flex;
+    /* opacity: 1; */
 }
 
 .footerRotation{
@@ -1325,7 +1345,7 @@ input:focus{
         /* border: 1px solid; */
     }
 
-    .shoppingCart img{
+    .shoppingCart svg{
         width: 24.74px;
         height: 24px;
     }
@@ -1346,6 +1366,10 @@ input:focus{
     
     }
 
+    .navbarContainer *{
+        text-transform: capitalize;
+    }
+
     /* .navbarContainer > *{
         border: 1px solid;
     } */
@@ -1364,6 +1388,10 @@ input:focus{
         padding-top: 20px;
         padding-bottom: 10px;
         box-shadow: 0 3px 3px 0 #0000000D;
+        display: flex;
+        visibility: hidden;
+        transition: opacity 1s ease-in-out;
+        opacity: 0;
 
     }
 
@@ -1526,6 +1554,7 @@ input:focus{
 
     .categoriesContainer .categoriesColumn *:hover{
         color: var(--blue);
+        font-weight: 700;
     }
 
     #showNavbarBtn:hover {
@@ -1538,11 +1567,19 @@ input:focus{
     }
 
     #showNavbarBtn:hover ~ .homeMenu{
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
         display:flex;
+        visibility: visible;
     }
 
     .emphasizedItem{
         color: var(--blue) !important; 
+        
+    }
+
+    .emphasizedItem *{
+        font-weight: 700;
     }
 
     .emphasizedItem svg{
@@ -1839,6 +1876,13 @@ input:focus{
 
     .footerDisclaimer{
         max-width: 1074px;
+    }
+
+    .showContent{
+        transition: opacity 1s ease-in-out;
+        display: flex;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
