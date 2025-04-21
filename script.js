@@ -2,19 +2,16 @@ new Swiper('.swiper', {
     loop: true,
     spaceBetween: 17,
   
-    // If we need pagination
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
   
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
 
-    //Responsive breakpoints
     breakpoints: {
         0: {
             slidesPerView: 2
@@ -39,7 +36,6 @@ const changeElementText = (selector,text)=>{
 }
 
 const changeTextOnResize = (width)=>{
-    // console.log(el)
     const texts = [
         {
             destination: ".lowerBannerText .lowerBannerDiscount",
@@ -115,7 +111,6 @@ window.document.querySelectorAll(".footerNavbarSection h5 img").forEach((section
     section.parentNode.addEventListener('click',(evt)=>{
         section.classList.toggle('footerRotation')
         section.parentNode.parentNode.querySelector('ul').classList.toggle("hideContent")
-        // console.log(evt.target.parentNode.parentNode.querySelector('ul').classList)
     })
 })
 
@@ -125,7 +120,6 @@ const addNavContentToHomeMenu = (childHTMLElements)=>{
 
     childHTMLElements.map((el)=>{
         navigationContainer.appendChild(el)
-        // console.log("Elemento adicionado")
     })
 }
 
