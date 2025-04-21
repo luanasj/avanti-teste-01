@@ -1232,10 +1232,13 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 @media (min-width: 1024px){
-    
-
     .carouselSection:last-of-type{
         display: flex;
+    }
+
+    .seeMoreLink{
+        text-decoration: none;
+        color: #303030;
     }
         
     .footerMainFrame{
