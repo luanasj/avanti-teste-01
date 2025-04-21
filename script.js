@@ -278,7 +278,6 @@ const buildHomeMenuContent = async (dataURL)=>{
         
         addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[0])])
     })
-    // addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[0])])
  
 }
 
