@@ -83,9 +83,6 @@ const changeIconsOnResize = (width)=>{
 }
 
 
-
-
-
 window.addEventListener('resize',(evt)=>{
     const pageWidth = evt.target.innerWidth
     changeTextOnResize(pageWidth)
@@ -98,6 +95,21 @@ window.document.addEventListener('DOMContentLoaded', (evt)=>{
     changeTextOnResize(pageWidth)
     changeIconsOnResize(pageWidth)
 })
+
+window.document.querySelector(".searchBar .searchButton").addEventListener('click',(evt)=>{
+    const searchItem = document.querySelector(".searchBar input").value
+    const spanText = `Você buscou por: ${searchItem}`
+
+
+    const searchInfo = document.querySelector(".searchBar .showSearchContent")
+    searchInfo.innerText = spanText
+
+    setTimeout((text) => {
+        if (searchInfo.innerText == text){searchInfo.innerText = ""}
+    }, 5000, spanText);
+
+})
+
 
 window.document.querySelectorAll(".footerNavbarSection h5 img").forEach((section)=>{
     section.addEventListener('click',(evt)=>{

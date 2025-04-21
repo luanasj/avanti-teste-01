@@ -248,6 +248,23 @@ input:focus{
     /* max-width: ; */
     /* background-color: #005CFF; */
     order: 3;
+    position:relative;
+}
+
+.showSearchContent{
+    position: absolute;
+    /* border:1px solid; */
+    /* width: 80%; */
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    bottom: -16px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 #headerSearchBar #headerSearchInput{
