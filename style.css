@@ -1325,7 +1325,7 @@ input:focus{
         /* border: 1px solid; */
     }
 
-    .shoppingCart img{
+    .shoppingCart svg{
         width: 24.74px;
         height: 24px;
     }
@@ -1344,6 +1344,10 @@ input:focus{
         column-gap: 45px;
         flex-wrap: wrap;
     
+    }
+
+    .navbarContainer *{
+        text-transform: capitalize;
     }
 
     /* .navbarContainer > *{
