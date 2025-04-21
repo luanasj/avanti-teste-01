@@ -108,44 +108,10 @@ const addNavContentToHomeMenu = (childHTMLElements)=>{
     })
 }
 
-// const newDiv = document.createElement('div')
-// newDiv.innerHTML = "O AMOR É LINDO"
-// newDiv.style.border = '1px solid'
 
-// addNavContentToHomeMenu([newDiv])
-
-const homeMenuDepartments = (departments)=>{
-    console.log(departments)
-    const departmentsList = document.createElement('ul')
-    departmentsList.classList.add('menuDepartmentsLinks')
-    
-    const homeMenuDepartmentOnMouseEnterHandler = ()=>{
-
-    }
-
-    const homeMenuDepartmentOnMouseLeaveHandler = ()=>{
-        
-    }
-
-    departments.map((department)=>{
-        const listItem = document.createElement('li')
-        listItem.classList.add("menuDepartment")
-        listItem.id = `menu-department-${department.id}`
-
-        const listItemLink = document.createElement('a')
-        listItemLink.href = `${department.url}`
-        listItem.appendChild(listItemLink)
-
-        listItemLink.innerHTML += `<span>${department.nome}</span><svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4.45948 5.03932L1.27979 8.27623C0.987123 8.57459 0.512778 8.57459 0.219501 8.27623C-0.0731669 7.97892 -0.0731669 7.49559 0.219501 7.1978L2.86978 4.49986L0.219501 1.80232C-0.0731669 1.50453 -0.0731669 1.02185 0.219501 0.723405C0.512778 0.425531 0.987123 0.425531 1.27979 0.723405L4.45948 3.96032C4.60614 4.10958 4.67943 4.3048 4.67943 4.50002C4.67943 4.69524 4.60614 4.89038 4.45948 5.03932Z"/> </svg>`
-    
-        listItem.addEventListener("mouseenter", homeMenuDepartmentOnMouseEnterHandler)
-        listItem.addEventListener("mouseleave", homeMenuDepartmentOnMouseLeaveHandler)
-
-        departmentsList.appendChild(listItem)
-    })
-
-    return departmentsList
-
+const removeElement = (classSelector)=>{
+    const previousContainer = document.querySelector(classSelector)
+    previousContainer.remove()
 }
 
 const homeMenuCategories = (department,title)=>{
@@ -175,12 +141,43 @@ const homeMenuCategories = (department,title)=>{
     return categoriesContainer
 }
 
+const homeMenuDepartments = (departments)=>{
+    // console.log(departments)
+    const departmentsList = document.createElement('ul')
+    departmentsList.classList.add('menuDepartmentsLinks')
+    
+    const homeMenuDepartmentOnMouseEnterHandler = (dep)=>{
+        removeElement(".categoriesContainer")
+        addNavContentToHomeMenu([homeMenuCategories(dep)])
+    }
+
+    departments.map((department)=>{
+        const listItem = document.createElement('li')
+        listItem.classList.add("menuDepartment")
+        listItem.id = `menu-department-${department.id}`
+
+        const listItemLink = document.createElement('a')
+        listItemLink.href = `${department.url}`
+        listItem.appendChild(listItemLink)
+
+        listItemLink.innerHTML += `<span>${department.nome}</span><svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4.45948 5.03932L1.27979 8.27623C0.987123 8.57459 0.512778 8.57459 0.219501 8.27623C-0.0731669 7.97892 -0.0731669 7.49559 0.219501 7.1978L2.86978 4.49986L0.219501 1.80232C-0.0731669 1.50453 -0.0731669 1.02185 0.219501 0.723405C0.512778 0.425531 0.987123 0.425531 1.27979 0.723405L4.45948 3.96032C4.60614 4.10958 4.67943 4.3048 4.67943 4.50002C4.67943 4.69524 4.60614 4.89038 4.45948 5.03932Z"/> </svg>`
+    
+        listItem.addEventListener("mouseenter", ()=>{homeMenuDepartmentOnMouseEnterHandler(department)})
+
+        departmentsList.appendChild(listItem)
+    })
+
+    return departmentsList
+
+}
+
+
 const buildHomeMenuContent = async (dataURL)=>{
     const dados = await fetch(dataURL)
     const departments = await dados.json()
-    addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[1])])
-
     
+    addNavContentToHomeMenu([homeMenuDepartments(departments),homeMenuCategories(departments[0])])
+   
 }
 
 buildHomeMenuContent("./assets/files/departments.json")
